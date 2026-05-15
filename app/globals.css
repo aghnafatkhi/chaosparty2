@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-game-bg: #0D0D2B;
+  --color-game-surface: #1A1A40;
+  --color-game-pink: #FF2D78;
+  --color-game-yellow: #FFE135;
+  --color-game-green: #39FF14;
+  --color-game-purple: #9B5DE5;
+
+  --font-fredoka: var(--font-fredoka), ui-sans-serif, system-ui;
+  --font-nunito: var(--font-nunito), ui-sans-serif, system-ui;
+}
+
+body {
+  background-color: var(--color-game-bg);
+  color: white;
+}
+
+@layer utilities {
+  .animate-float-up {
+    animation: float-up 1s ease-out forwards;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1);
+  }
+}
